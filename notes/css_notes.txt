@@ -1,0 +1,605 @@
+/* CSS code comments */
+
+LINK TAG (https://www.w3schools.com/Tags/tag_link.asp)
+
+ rel (relationship) establishes a relationshsip between a linked resource and the current document. 
+ (https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel)
+
+ CSS uses a priority scheme to determine which style rules apply if more than one rule matches a particular element. In this scheme, priorities (or "weights")  cascade and are assigned to rules, so that the results are predictable.
+
+A stylesheet is a list of rules. Each rule (or "rule-set") consists of one or more selectors and a declaration block.
+--------------------------------------------------------------------------------------------------------------------------
+
+CSS SELECTOR 
+
+Selectors are used for declaring the HTML elements to which a style will apply.
+
+The most common selectors are:
+
+all elements with a specific HTML tag (e.g., p, h1)
+elements specified by the following attributes:
+id (these are preceded by # in CSS)
+These must be unique and can only be used once on your page.
+class (these are preceded by .  in CSS)
+These can be used multiple times to share repeating CSS code.
+Declaration Block
+A declaration block is a list of declarations contained within braces. Each individual declaration consists of a property, a colon (":"), and a value. 
+If a block has multiple declarations, they must be separated by a semi-colon(";").
+
+Here are some examples.
+
+For all "p" HTML tags, make the font color blue:
+
+p{
+  color: blue;
+}
+copy
+For an element with the id "important", make the font size 36px.
+
+#important{
+  font-size: 36px;
+}
+copy
+For all elements with the class "info", make the background green and add a 1px wide black border.
+
+.info{
+  background-color: green;
+  border: 1px solid black;
+}
+copy
+In the above examples, p, #important, and .info are selectors. Color, font-size, background-color, and border are properties.
+
+More on selectors: 
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors
+http://www.w3schools.com/cssref/css_selectors.asp
+Now that we know a little more about how to use selectors, let’s make a general list of the internal priorities for CSS:
+
+element (1 point)
+.class (10 points)
+#id (100 points)
+This is the default priority order. In addition to this, specificity will also count, for example, 
+ul li will override li. W3C has made a decent table over how you should calculate internal weight:
+
+li            {...}  /* a=0 b=0 c=1 -> specificity =   1 */
+ul li         {...}  /* a=0 b=0 c=2 -> specificity =   2 */
+ul ol li      {...}  /* a=0 b=0 c=3 -> specificity =   3 */
+li.red        {...}  /* a=0 b=1 c=1 -> specificity =  11 */
+ul ol li.red  {...}  /* a=0 b=1 c=3 -> specificity =  13 */
+#list         {...}  /* a=1 b=0 c=0 -> specificity = 100 */
+copy
+a represents the number of #id attributes in the selector
+b represents the number of class attributes
+c represents the number of tag names
+Combining these into a number will give you the actual weight. This means that  li #list will have the same weight as ul #list. 
+This is probably one of the most confusing things about the cascade scheme, but it’s actually simpler than you might think: it’s all about counting.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+STYLING ELEMENTS 
+
+Below are some of the most common styling properties that will affect all elements. This is not a definitive list and you should try doing a search for other properties that can help you to add style to your documents.
+
+width | height:
+The width and height properties are used to determine the size of your elements. The values can be expressed in pixels (px) and percentage (%). When working with static content using px is suitable as you will be defining your page to not change. If you are working with responsive design, you will want to use %.
+
+Be careful when setting your height property as this will determine how much content the element can hold. If you leave it unset, your element will expand to fit the content it holds. If you set it and you have more content than can be displayed then you will need to either manually adjust the height each time you change the content or utilize the overflow property.
+
+When you want your element to resize ie: images, you can size just one property (width or height) and the other will adjust appropriately to keep the relative dimensions of the image.
+
+  a {
+    width: 25px;
+  }
+  div {
+    width: 100%;
+    height: 200px;
+  }
+  img {
+    width: 250px;
+  }
+copy
+overflow:
+This property determines what should happen when the content inside of a container is too much for the container size. You can set the container to hide the additional information that does not fit, show the information no matter what, or have a scroll bar added to the element so the content is contained but still viewable.
+
+  div {
+    overflow: scroll;
+  }
+copy
+background:
+The background property can modify the background of an element all in one line. This is a shorter version than splitting each property on its own line of code. The color can be defined using hex, rgb or semantic code.
+
+  p {
+    background: #ffffff url("cherries.png") no-repeat fixed center;
+  }
+copy
+background-color | background-image | background-position | background-size | background-repeat:
+These background properties adjust the background by property type. Like background, background-color can be defined using hex, rgb or semantic code.
+
+  p {
+    background-color: blue;
+  }
+  div {
+    background-image: url("cherries.png");
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+copy
+border:
+This property adjusts all border elements in one line. The first value is the border thickness. The second value is the border type. The third value is the border color. The color can be hex, rgb or semantic code.
+
+The border property can also be broken down into separate lines using border-width, border-style and border color. Additionally, you can select very specifically which border you want to style by using border-top, border-bottom, border-right, border-left.
+
+  button {
+    border: 2px dotted green;
+  }
+  div {
+    border: 1px solid #000000;
+  }
+  p {
+    border-right: 1px groove rgb(100,100,100);
+    border-left: 1px groove rgb(200,200,200);
+  }
+copy
+border-radius
+This property allows the corners of your border to be given a rounded appearance. The values can be set using px or %.
+
+  button {
+    border-radius: 5px;
+  }
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+STYLING TEXT 
+
+The size can be calculated from pixels to em using this formula: pixels/16=em
+
+The following are some of the most common text style properties utilized. 
+This is not a complete list and you are encouraged to search the internet for other useful text styling properties.
+
+color:
+The text color is specified using the color property. The value of the color property can be expressed using hex, RGB or semantic code.
+
+  p {
+    color: #ffffff;
+  }
+  a {
+    color: rgb(255, 255, 255);
+  }
+  span {
+    color: white;
+  }
+copy
+text-align:
+This property is used to set the horizontal alignment of any text. Text can be centered, or aligned to the left or right, or justified. 
+This property will only work if the property is also display block.
+
+  h1 {
+    text-align: center;
+  }
+copy
+text-decoration:
+The text-decoration property is used to add and remove underlines, overlines, and line-throughs.
+
+  a {
+    text-decoration: none;
+  }
+copy
+Font
+font-family:
+The font-family property specifies the font style to use for an element. There are two types of font family names:
+
+named-family - Examples "times", "courier", "arial"
+generic-family - Examples "serif", "sans-serif", "cursive", "fantasy", "monospace"
+Web-safe fonts:
+
+There are fonts that are installed on pretty much all systems and 
+so are termed web safe fonts because you can with some certainty know it will look the same regardless of the system the user has. 
+Some of these are; Verdana, Arial, Trebuchet MS, Times New Roman, Georgia, Andale Mono, Courier New, Comic Sans, and Impact.
+
+  p {
+    font-family: "helvetica neue", arial, verdana, sans-serif;
+  }
+copy
+Font-family allows for multiple options to be entered where the browser goes through them from left to right until it finds a font that is installed on the system which can be used. 
+This means that you always want to make sure you have a generic-family option as your last value so that if none of the others can be found, 
+the browser will use the system default for the family specified.
+
+The browser searches for Helvetica Neue on the user's system and uses this if it finds it.
+If Helvetica Neue isn't found, the browser searches for Arial on the user's system and uses it if it finds it.
+If Arial isn't found, we'll use Verdana.
+As a last resort, if none of the fonts in the font stack are found we fall back to sans-serif, 
+which basically instructs the browser to use whatever the system's default sans-serif font is. 
+You don't know exactly what will be used in this eventuality, but at least this is better than ending up with the browser default, Times new roman, which is a serif font!
+Note that fonts with more than one word in their name need surrounding in quotes.
+
+font-size:
+The font-size property values can be expressed in four different units pt, px, em, %. pt and px (point and pixel) 
+are considered static size values and will not adjust properly when resizing your page. em and % (responsive measure and percent) 
+however will resize and are what most developers recommend using. Below is a drop-down chart showing the approximate equivalents between the four units.
+
+The size can be calculated from pixels to em using this formula: pixels/16=em
+
+Point | Pixel | Em | Percent
+  h3 {
+    font-size: 10pt;
+  }
+  p {
+    font-size: 14px;
+  }
+  a {
+    font-size: 1.2em;
+  }
+  span {
+    font-size: 80%;
+  }
+
+font-style
+This property controls the slanted emphasis of the text. Some text may have an italic property built into the font and so selecting italic would be fine. For fonts that do not have an italic style, the value oblique can be used to mimic italicized text.
+
+  span {
+    font-style: italic;
+  }
+copy
+font-weight
+This property defines the thickness of a character line. normal is often the default value. The values can be set numerically or semantically.
+
+normal
+  p {
+    font-weight: bold;
+  }
+  span {
+    font-weight: 600;
+  }
+
+What is a span tag?
+If you wanted to highlight specific text within a paragraph or division, <span> can be used.  Unlike <div> which puts the next <div> on a separate line, <span> by default puts the element on the same line.  For example, consider
+
+<h1>Hello <div>World</div> </h1>
+Above by default would put 'World' on a new line.  However if you wanted World to show up in the same line, you could instead do
+
+<h1>Hello <span>World</span> </h1>
+Then in the css, you could have done something like this to just highlight the word 'World':
+
+h1 span {
+   font-weight: bold;
+   color: blue;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+INSPECT ELEMENT 
+
+Editing HTML and CSS can feel like disarming a bomb; one little change and your project goes bananas. Your greatest ally in editing is a browser tool called Developer Tools. It is included in Chrome, Firefox, the latest version of Internet Explorer, Edge, and Safari.
+
+To access inspect element, simply right-click any element within the browser window and click 'Inspect' and voila! Inspect Element is a feature that displays all of the properties of the webpage you are currently viewing.
+
+
+
+Above is a screenshot of Chrome's Inspect window. On the gray tab bar at the top, you'll see a number of options including 'elements' and 'console'. Clicking these options will display different information about the page.
+
+The three most important tabs of the Chrome Developer Tools window are: 'console', 'elements' ('inspector' in Firefox), and 'sources' ('resources' in Safari). For this tutorial, we will use Chrome as our example, but you shouldn't have a tough time picking up the techniques with Firefox or Safari if you follow along.
+
+Elements Tab
+For the next couple of sections, we'll be looking at ESPN.com. Since most companies change their websites frequently, keep in mind that the current ESPN website you will see if you visit it now may look different from the one we are using in the examples/video below. Regardless, the same tools and concepts can be applied.
+
+The elements tab allows you to view the HTML that is being rendered by your browser. You can see all of the classes and id's given to the HTML content as well, which is a big help for debugging CSS. The picture above shows the elements tab of a chunk of the HTML for ESPN.com. Notice how you can see comments too!
+
+If you click on a particular element of the HTML in the elements box, you will see the right-hand side of the Inspect Element window change. This part of the window displays a ton of CSS and JavaScript information. There is a tab on the right side called 'styles' and it is by far the most helpful tool when working with CSS.
+
+
+
+ (this is the element the two shots above are detailing)
+
+The styles tab shows all of the rendered CSS for a particular element. The screenshots above are the CSS information for the ESPN logo on their web page. The image on the left shows you the computed styles of the element and the stylesheet they were taken from. Scroll all the way to the bottom of the tab and you will find the image on the right, which should be familiar. This image is the box model values of the element in question. You can see the margin, padding, border, and the dimensions of any element on the page. What's even cooler is that you can hover over a specific part of the box in the inspect element window and the element's particular property will be highlighted on the actual element in the browser window. Try it! This tool is great for tweaking positioning as you can change the values in the box in Inspect Element. (These changes are only made in the browser and will not be saved to the CSS file itself.)
+
+Looking at the picture again, notice how there is an area that says 'element.style'. Well, you can actually write your own CSS styling right there to manipulate the display of the web page. Of course, these changes aren't permanent, but you can imagine the usefulness of such a tool! One more thing you can do with all of the styling rules listed in the styles tab is to turn off the associated CSS property by unchecking a particular style item.
+
+How Can Inspect Element Be Used
+
+Great, now what?
+Any web developer worth his or her salt will tell you that Inspect Element is a priceless tool in the fight against bad code. There are people whose jobs are to strictly make these development tools, so you are in good hands! Inspect is super easy to pick up once you've explored it a bit. Start using it regularly and it will save you a lot of time!
+
+Color Picker
+Color palette selection and design are important parts of designing a web page. To help with precise color selection, there are a variety of tools available to both find/define colors and assemble color palettes. Tools for generating color schemes are easily found searching the internet, but getting the exact color used on your favorite website's button borders might seem more difficult. In this section, we will outline how to use the Chrome Dev Tool's Color picker to help us find colors from other websites that we may be after!
+
+To access the colorpicker tool, we need to first open the Chrome Dev tools and select an element with a background color. Once we have the dev tools opened and an element with a background color selected we can click on the color patch in the Style window of the Dev tools. At this point, the dev tools will display a variety of color information about the background color of the element- showing different adjustable slides, color code values, related colors, and a gradient of different intensities and darkness.
+
+To use the color picker to find the values of colors on the page, click the eye dropper icon to toggle color-picker to ON (should turn blue). At this point, you can move your mouse cursor over the webpage and a small circle showing the magnified pixels near your cursor will be displayed, with the central pixel outlined and its' color value displayed on click.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+THE DISPLAY PROPERTY - Block, Inline-Block, Inline
+https://developer.mozilla.org/en-US/docs/Web/CSS/display
+
+
+Each HTML element by default is either inline or block.
+
+Inline items only take up as much space as needed.
+
+inline
+
+
+Inline elements: <a>, <img>, <span>, <input>, <label>, <select>, <textarea>
+
+Block items take up the 100% of the width of the parent element. Even if the width of the element is less than the parent, the element will still take up 100% of the width of the parent
+
+block
+
+
+Block elements: <body>, <div>, <form>, <h1>-<h6>, <p>, <table>, <ul>, <ol>, <li>
+
+It's invalid to put block elements inside inline elements.
+
+Ex:
+
+Not valid:
+
+<a href="http://www.google.com">www.google.com<h1>Google</h1></a>
+copy
+Valid:
+
+<h1><a href="http://www.google.com">Google</a></h1>
+copy
+We can, however, change the default display style of HTML elements using CSS and the display property. The possible values for display are: inline, block, none, and inline-block.
+
+Ex: Inline links by default
+
+Inline-Default
+
+
+      <a href="#">One</a>
+      <a href="#">Two</a>
+      <a href="#">Three</a>
+      <a href="#">Four</a>
+      <a href="#">Five</a>
+    copy
+      a {
+        margin: 10px;
+        background: #eee;
+        color: black;
+        padding: 10px;
+      }
+    copy
+Turning them into block elements:
+
+Inline-Display-Block
+
+
+      <a href="#">One</a>
+      <a href="#">Two</a>
+      <a href="#">Three</a>
+      <a href="#">Four</a>
+      <a href="#">Five</a>
+    copy
+      a {
+        margin: 10px;
+        background: #eee;
+        color: black;
+        display: block;
+        padding: 10px;
+      }
+    copy
+On the reverse side, suppose we have the following navigation menu:
+
+<ul id="nav-menu">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Dashboard</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Contact Us</a></li>
+</ul>
+copy
+The HTML would normally appear like this:
+
+
+
+When we want to make this a horizontal menu on the top of our page, we can do this:
+
+#nav-menu{
+  list-style-type: none; /*This gets rid of the bullets.*/
+}
+#nav-menu li {
+  display: inline;
+}
+copy
+Now it looks like this:
+
+
+
+Inline-block:
+
+Consider the following example:
+
+
+
+Recall that <p> tags are block elements by default. When we display them as inline the two flow together into a single paragraph.
+
+Inline-Block-Example-Two
+
+
+      <p>Lorem ipsum dolor sit amet...</p>
+      <p>Lorem ipsum dolor sit amet...</p>
+    copy
+      p {
+        font-size: 14px;
+        background: #eee;
+        display: inline;
+      }
+    copy
+We’ve now lost all ability to set our width and height since the two paragraphs are completely integrated.
+
+The same paragraphs with inline-block:
+
+
+
+      p {
+        width: 180px;
+        margin:10px;
+        padding:20px;
+        font-size: 14px;
+        background: #eee;
+        display: inline-block;
+      }
+    copy
+What’s happening here is that we’re telling the browser to display the paragraphs inline, 
+but allow them to retain their block-level characteristics. 
+This means we can set a width and height manually and have the two elements remain distinct, 
+but also have them appear next to each other in the document flow.
+
+Vertical Align
+When we start utilizing inline-block, 
+we might notice that the vertical positioning of the blocks can start to behave differently than we might expect, 
+particularly when the blocks have different heights. 
+The default is for elements to be aligned to the lowest edge of the blocks within the line. 
+To adjust this behavior, we can use the CSS property vertical-align, which has values like top and middle.
+------------------------------------------------------------------------------------------------------------
+
+BOX MODEL - MARGIN, BORDER, PADDING 
+
+All web layouts are accomplished with block elements. 
+Designers use blocks, most often <div> elements, to create rectangular areas into which all content fits. 
+There are only three rules:
+
+Total area: the space an element occupies and affects.
+Float, clear and overflow
+Nested elements
+
+Total Area
+Total width is how much horizontal space a block occupies. This includes the block’s margin, border, and padding. Calculating width, padding, and margin is often the biggest headache for designers, but it's easy to see how they work if you use the box model.
+
+The box model consists of the properties margin, border, and padding.
+
+
+
+
+Margin is outside block elements, while padding is within them. This means that we use margin to separate a block from things around it, and padding to move a block's content away from its edges.
+
+We can specifically set the margin, padding, or border of any side of an element.
+
+div{
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+copy
+You can also use the shorthand property:
+
+div{
+  padding-top: 25px;
+  padding-right: 50px;
+  padding-bottom: 75px;
+  padding-left: 100px;
+}
+ copy
+is equivalent to:
+
+div{
+  padding: 25px 50px 75px 100px;
+}
+ copy
+And
+
+div{
+  padding-top: 25px;
+  padding-right: 50px;
+  padding-bottom: 75px;
+  padding-left: 50px;
+}
+ copy
+is equivalent to:
+
+div{
+  padding: 25px 50px 75px;
+}
+ copy
+And
+
+div{
+  padding-top: 25px;
+  padding-right: 50px;
+  padding-bottom: 25px;
+  padding-left: 50px;
+}
+ copy
+is equivalent to:
+
+div{
+  padding: 25px 50px;
+}
+ copy
+And
+
+div{
+  padding-top: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+}
+ copy
+is equivalent to:
+
+div{
+  padding: 25px;
+}
+ copy
+(The order flows clockwise, top -> right -> bottom -> left.)
+
+Now, according to the box model, the total width of an element is:
+
+(Margin x 2) + (Border x 2) + (Padding x 2) + Content Width
+
+Calculating the height is trickier. Why? Because vertical margins collapse.
+
+Ex:
+
+HTML:
+
+<div id="box-1">
+</div>
+<div id="box-2">
+</div>
+<div id="box-3">
+</div>
+copy
+CSS:
+
+#box-1, #box-2, #box-3{
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}
+#box-1{
+  margin: 20px;
+}
+#box-2{
+  margin: 30px;
+}
+#box-3{
+  margin: 40px;
+}
+copy
+You might think that this will look like this:
+
+
+But this code will actually result in this:
+
+
+When the vertical margins of two elements are touching, only the margin of the element with the largest margin value will be honored, while the margin of the element with the smaller margin value will be collapsed to zero.
+
+There are other situations where elements do not have their margins collapsed:
+
+floated elements
+absolutely positioned elements
+inline-block elements
+elements with overflow property set to anything other than visible (They do not collapse margins with their children.)
+cleared elements (They do not collapse their top margins with their parent block’s bottom margin.)
+----------------------------------------------------------------------------------------------------------
+
+LEGO CONCEPT 
+
+The Lego concept is a way to visualize the different elements in your website as lego pieces. 
+You want to put the big blocks down first and then place smaller blocks inside of them. 
+By focusing on the big blocks first, you can think of the general layout of your website. 
+After placing the big blocks, you determine which smaller boxes will exist inside of the bigger boxes and 
+position them accordingly. It might seem faster to look at a screenshot and 
+start coding HTML/CSS right away but drawing out the different lego pieces on the whiteboard first 
+(bigger ones first, then smaller ones) will help you construct HTML/CSS more quickly. 
+-----------------------------------------------------------------------------------------------------------------

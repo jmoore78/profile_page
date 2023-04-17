@@ -1,0 +1,555 @@
+Add videos if possible 
+
+floating divs 
+
+cool nav bar-Add an "active" class to the current link to let the user know which page he/she is on:
+
+add ads for cassie and nick 
+
+div vs section tag...Whats the difference and when to use it?-Section tags are better used in document-type web pages like articles to group small sections of similar content.
+
+main tag?-The <main> tag specifies the main content of a document. 
+The content inside the <main> element should be unique to the document. 
+It should not contain any content that is repeated across documents such as sidebars, navigation links, copyright information, site logos, and search forms.
+There must not be more than one <main> element in a document. 
+The <main> element must NOT be a descendant of an <article>, <aside>, <footer>, <header>, or <nav> element.
+
+header tag?
+The <header> element represents a container for introductory content or a set of navigational links.
+A <header> element typically contains:
+one or more heading elements (<h1> - <h6>)
+logo or icon
+authorship information
+Note: You can have several <header> elements in one HTML document. However, <header> cannot be placed within a <footer>, <address> or another <header> element.
+<article>
+  <header>
+    <h1>A heading here</h1>
+    <p>Posted by John Doe</p>
+    <p>Some additional information here</p>
+  </header>
+  <p>Lorem Ipsum dolor set amet....</p>
+</article>
+
+footer tag?
+The <footer> tag defines a footer for a document or section.
+A <footer> element typically contains:
+authorship information
+copyright information
+contact information
+sitemap
+back to top links
+related documents
+You can have several <footer> elements in one document.
+Contact information inside a <footer> element should go inside an <address> tag.
+<footer>
+  <p>Author: Hege Refsnes</p>
+  <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+</footer>
+
+anchors...What are they and when to use them? <a> tags for links-https://www.w3schools.com/html/html_links.asp
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+CODING DOJO NOTES HTML
+
+HEAD TAG:
+<head>
+    <meta charset="utf-8">
+    <title>My Awesome Webpage</title>
+    <meta name="description" content="The text here describes what the webpage
+ is about. It's what will show up in search results for search engines like
+ google under the title of the webpage. It's important that this is relevant
+ to your page and well written!" >
+    <link rel="stylesheet" href="my_css_file.css">
+    <script src="my_javascript_library.js"></script>
+    <script src="another_javascript_file.js"></script>
+</head>
+
+
+<head>
+This is the opening head tag which indicates that we are about to begin talking about the properties of the document.
+
+Meta Tags (https://www.w3schools.com/tags/tag_meta.asp)
+Meta tags make your web page more meaningful for search engines like Google.
+
+The attribute content of the description meta tag describes the basic purpose of your web page (a summary of what the web page contains). 
+For each web page, you should place a concise and relevant summary in this section.
+
+For example, this description:
+<title>Coding Dojo: Coding Bootcamp in Seattle and San Francisco</title>
+<meta name="description" content="Coding Dojo Founder, Michael Choi, developed and refined the dynamic learning curriculum after years of 
+hands-on experience as an executive in fast growing..."><br>
+
+https://www.w3schools.com/TAGs/att_meta_name.asp
+This is what shows up in Google's search engine results page:
+Coding Dojo: Coding Bootcamp in Seattle and San Francisco 
+www.codingdojo.com/
+Coding Dojo Founder, Michael Choi, developed and refined the dynamic learning...
+
+<meta charset="utf-8">
+Properly encoded Web pages declare the encoding to a browser through a meta tag in the header. 
+Without this tag, a browser may not know to switch to the proper encoding and characters may be displayed as gibberish.
+
+<title>My Awesome Webpage</title>
+This is the title of your web page, which means that when you open this page in the browser, the tab that opens it will read "My Awesome Webpage". 
+This will be the name that it gets bookmarked with, as well as the name that is used when it is displayed as a search result in a search engine.
+
+<meta name="description" content="description content">
+The description meta tag is used by search engines when displaying results.
+
+<link rel="stylesheet" href="my_css_file.css">
+This line links a stylesheet to our page, which will determine how our HTML elements are visually displayed on the page. 
+We will learn more about what goes into my_css_file.css in the CSS section.
+
+<script src="my_javascript_library.js"></script>
+This line links a JavaScript or jQuery file to our document. JavaScript makes our pages interactive. We will learn more about these files in the jQuery section.
+
+NOTE: You can link to as many stylesheets or JavaScript files as you want within the head tags.
+
+</head>
+This is the closing head tag. It indicates that we are done talking about the properties of our page and we can move on to the body!
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+FORMS (https://validator.w3.org/)
+ Forms
+Forms are one of the most important HTML tags you will learn. They are responsible for all the data exchange between the user (front-end) and the server (back-end). 
+So it's very important that you have a good understanding of how to build them.
+
+A form's job is to take in user input and send it to the back-end to be processed. 
+A form is declared by using the <form> tag, which will have attributes action and method that decide where the form information gets sent, 
+and how it gets sent respectively. (Don't worry about the values we're using for these attributes yet, this is covered during your first stack.)
+
+Taking in the input is done by using input fields, usually designated by the <input> tag. 
+Depending on the type of information required, the way in which we take in the information may be different. 
+This is sometimes designated by a type attribute, and other times by a different tag. 
+Each input will typically also have a label (<label>) that is the name of the field. 
+To make sure that a specific label is linked/associated to a specific input element, we must add corresponding for attribute on the label with input's id attribute. 
+Including a label tag around the input field is a convention that allows us to click on the label to focus on the input field.
+
+A name attribute also will typically go hand in hand with your input tags. 
+They are used mainly for sending form data to the back end so don't worry about the name attribute for now. It will be explained further in your first stack.
+
+Let's look at what input types would be used in the following circumstances:
+
+When the user needs to enter a short amount of text, such as an email address or name.
+The appropriate input type here is text.
+
+<label for="first_name">First Name:</label>
+<input type="text" id="first_name" name="first_name">
+<label for="last_name">Last Name:</label>
+<input type="text" id="last_name" name="last_name">
+<label for="email">Email:</label>
+<input type="text" id="email" name="email">
+copy
+A password field.
+The appropriate input type here is password.
+
+<label for="password">Password</label>
+<input type="password" id="password" name="password">
+copy
+When the user can choose only 1 option from a variety of options. A good example is a gender selector.
+One appropriate input type here is radio buttons.
+
+<label for="male">Male</label>
+<input type="radio" id="male" name="gender" value="male">
+<label for="female">Female</label>
+<input type="radio" id="female" name="gender" value="female">
+<label for="decline">Prefer not to say</label>
+<input type="radio" id="decline" name="gender" value="decline">
+copy
+Another option is a dropdown menu, which uses <select> and <option> tags.
+
+<select name="gender">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="decline">Prefer not to say</option>
+</select>
+copy
+When the user can choose multiple things from a variety of options, such as choosing their favorite 3 colors from 5 options.
+The appropriate input type here is checkboxes.
+
+<label for="blue">Blue</label>
+<input type="checkbox" id="blue" name="color" value="blue">
+<label for="green">Green</label>
+<input type="checkbox" id="green" name="color" value="green">
+<label for="red">Red</label>
+<input type="checkbox" id="red" name="color" value="red">
+<label for="black">Black</label>
+<input type="checkbox" id="black" name="color" value="black">
+<label for="purple">Purple</label>
+<input type="checkbox" id="purple" name="color" value="purple">
+copy
+When the user might want to enter longer text. This can be used in forums for comments, or for user profile descriptions.
+In this case we use the <textarea> tag.
+
+<textarea name="description"></textarea>
+copy
+When a form needs to submit more than just user input. 
+Input type hidden is similar to text fields, except they do not show on the page and users can not enter anything into them. 
+This is useful for the back-end authentication and passing data. 
+
+<input type="hidden" name="id" value="7">
+copy
+Finally, to create a submit button:
+The appropriate input type is submit.
+
+<input type="submit" value="Submit">
+copy
+Let's look at a sample full registration form:
+
+<form action="process.php" method="post">
+    <p>Please Register</p>
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name">
+   
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name">
+   
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+   
+    <p>Select your gender:</p>
+    <label for="male">Male</label>
+    <input type="radio" id="male" name="gender" value="male">
+   
+    <label for="female">Female</label>
+    <input type="radio" id="female" name="gender" value="female">
+    
+    <label for="decline">Prefer not to say</label>
+    <input type="radio" id="decline" name="gender" value="decline">
+   
+    <p>Select 3 of your favorite colors:</p>
+    <label for="blue">Blue</label>
+    <input type="checkbox" id="blue" name="color" value="blue">
+    
+    <label for="green">Green</label>
+    <input type="checkbox" id="green" name="color" value="green">
+   
+    <label for="red">Red</label>
+    <input type="checkbox" id="red" name="color" value="red">
+    
+    <label for="black">Black</label>
+    <input type="checkbox" id="black" name="color" value="black">
+   
+    <label for="purple">Purple</label>
+    <input type="checkbox" id="purple" name="color" value="Purple">
+    
+    <p>Say a few words about yourself:</p>
+    <textarea name="description"></textarea>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+   <label for="pw_confirm">Password Confirmation:</label>
+   <input type="password" id="pw_confirm" name="password_confirmation">
+   
+   <input type="submit" value="Click here to register">
+</form>
+copy
+Other label-input Declaration
+Most CSS frameworks (especially on Twitter Bootstrap), use the label-input pairing shown above, 
+but you may encounter a different format on how the label-input set is being declared. Below is an example:
+
+<form>    
+    <p>Please Register</p>
+    <label>
+        Name:<input type="text" name="name">
+    </label>
+    <p>Select your gender:</p>
+    <label>
+       Male<input type="radio" name="gender" value="male"> 
+    </label>
+    <label>
+       Female<input type="radio" name="gender" value="female">
+    </label>
+    <label>
+       Prefer not to say<input type="radio" name="gender" value="decline">
+    </label>
+    <p>For security, enter your password.</p>
+    <label>
+        Password:<input type="password" name="password">
+    </label>
+    <input type="submit" value="Click here to register">
+</form>copy
+Notice that the input element is now nested inside the label element and we no longer need to link the two using the label's for attribute and 
+the input's id attribute.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Important Tips To Avoid Headaches
+HTML is a language that allows poor code to execute and render to varying levels of accuracy. Successful rendering, however, does not mean that our code is correct or guarantee that it will validate as standards compliant. Poor code is unpredictable, and you can't be certain what you're going to get when it renders. We have to pay close attention when writing HTML and be sure to nest/indent and close all elements correctly and to always validate our code.
+
+Use Proper Document Structure
+Pages will render without the use of the <!DOCTYPE html> doctype or <html>, <head>, and <body> elements. However, without the doctype and these structural elements, pages will not render properly in every browser.
+
+Bad Code
+<html>
+    <h1> Hello World! </h1>
+    <p> This is my first website </p>
+</html>
+copy
+Good Code
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My First Website </title>
+    </head> 
+    <body>
+        <h1> Hello World! </h1>
+        <p> This is my first website </p>
+    </body>
+</html>
+copy
+Constantly Validate Your Code!
+While writing HTML, make a habit to validate frequently; this will save you from issues that are harder to pinpoint (or redo) once your work is completed and lengthier.
+
+HTML validation services such as the free  W3C Markup Validation Service are useful debuggers that help you identify rendering errors.
+
+Organize HTML Syntax
+As your HTML gets bigger, managing it can become quite a task. Below are quick rules that can help you keep your syntax clean and organized:
+
+Use lowercase letters within element names, attributes, and values.
+Indent nested elements. 
+Use double quotes, not single or completely omitted quotes to store in values for HTML attributes. Good example:
+<h1 id="page_title">My First Website!</h1>
+<p class="sub_title">This is <span class="emphasize">Cool!</span></p>copy
+Avoid Using Too Many divs!
+When writing HTML, it is easy to get carried away adding <div> elements here and there to build out necessary styles. While this works, it can add quite a bit of bloat to a page, and before too long we're not sure what each <div> element does.
+
+Bad Code
+<div class="container">
+    <div class="article">
+        <div class="headline"> HTML Rocks! </div>
+    </div>
+</div>
+copy
+Good Code
+<div class="container">
+    <article>
+        <h1>HTML Rocks!</h1>
+    </article>
+</div>
+copy
+Make Use of Semantic Elements
+Deciding which elements to use to describe different content may be difficult, but these elements are the backbone of semantics.
+
+Note: Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
+of the information in webpages rather than merely to define its presentation or look.
+via:  en.wikipedia.org/wiki/Semantic_HTML
+Here the HTML doesn't use the proper heading and paragraph elements; instead, it uses meaningless elements to group content.
+
+Bad Code
+<span class="heading"><strong>Welcome Back</span></strong>
+<br><br>
+It has been a while. What have you been up to lately?
+<br><br><br>
+copy
+Good Code
+<h1>Welcome Back</h1>
+<p> It has been a while. What have you been up to lately?</p>
+copy
+Keep Your Tag Names Lowercase
+Technically, you can get away with capitalizing your tag names.
+
+<DIV>
+    <P> I'm out of random stuff! </P>
+</DIV>
+copy
+Having said that, the best practice is to keep all tags lowercase.
+
+Use alt Attribute With Images
+Using meaningful alt attributes with <img> elements is a must for writing valid and semantic code. 
+The alt information is helpful for when a user cannot view your image - whether due to a connection issue, a missing image, 
+or because the user is utilizing a screen reader.
+
+Bad Code
+<img id="logo" src="images/logo.png" alt="logo.png">
+copy
+Good Code
+<img id="logo" src="images/logo.png" alt="My First Website's logo">
+------------------------------------------------------------------------------------------------------------------
+
+Additional Tags
+  
+
+There are a ton of tags in HTML 5. Here are some additional tags that you might find helpful during your dev career!
+
+DOCTYPE
+We have been using many aspects of HTML5 all along. For example, the doctype for HTML4.01 looks like this:
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+copy
+This is not very human-readable. It is simply saying, "this document is written in HTML 4.01." The doctype for HTML5 looks like this:
+
+<!DOCTYPE html>
+copy
+This states, "this document is written in HTML5". Notice that in this new declaration, we are not specifying the version of HTML. 
+This is because HTML5 supports existing content (the doctype can be applied to an existing HTML 4.01 document). 
+Any future versions of HTML will also support the existing content in HTML5 so this way of declaring your doctype is the way to go.
+
+Browser Support: All versions of Chrome, IE, Firefox, Safari, Opera
+
+Character Encoding
+In HTML 4.01, you specified the character encoding of your HTML document with this meta declaration:
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+copy
+In HTML5:
+
+<meta charset="utf-8">
+copy
+Browser Support: All versions of Chrome, IE, Firefox, Safari, Opera
+
+Script and Link Tags
+
+The <script> tag and the <link> tag is another place where HTML5 allows us to type less. 
+Before, you needed to specify a type value of "text/javascript" to script elements or a type value of "text/css" 
+if you were using link elements to reference your stylesheets.
+
+<script type="text/javascript" src="main.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+copy
+With HTML5 you can write: 
+
+<script src="main.js"></script>
+<link rel="stylesheet" href="style.css">
+copy
+Browser Support: All versions of Chrome, IE, Firefox, Safari, Opera
+
+
+
+Rich Media
+We often have to use a plug-in technology such as Flash or Silverlight to publish audio or video on the web. 
+These technologies "plug-in" the holes of the web. 
+However, these technologies are not open: they are not created by the community but are under the control of individual companies. 
+HTML5 to the rescue. It is in direct competition with proprietary technologies like Flash and Silverlight but instead of requiring a plug-in, 
+the rich media elements in HTML5 are native to the browser.
+
+
+
+Canvas (https://www.w3schools.com/html/html5_canvas.asp)
+Once an image has been served up to a browser, its contents cannot be updated. 
+You can create animated gifs or update the image's styles, but its contents cannot be updated. 
+The canvas element can now be used for creating dynamic images.
+
+<canvas id="work_of_art" width="400" height="200">
+    <p>Your browser does not support canvas</p>
+</canvas>
+copy
+You can learn how to interact with the canvas here. 
+Canvas offers a lot of the same tools that you find in a graphics program like Illustrator: strokes, fills, gradients, shadows, shapes, and bezier curves. 
+The difference is that you need to specify everything using JavaScript instead of using a GUI.
+
+Browser Support: Chrome 4.0+, IE 9.0+, FireFox 2.0+, Safari 9.0+, Opera 9.0+
+
+
+Audio (https://www.w3schools.com/tags/tag_audio.asp)
+Embedding an audio file in an HTML5 document is simple:
+
+<audio src="desperado.mp3">
+</audio>
+copy
+You might annoy your visitors this way, but you can even set an auto-play attribute...
+
+<audio src="desperado.mp3" autoplay>
+</audio>
+copy
+And you can annoy them a little more with loop...
+
+<audio src="desperado.mp3" autoplay loop>
+</audio>
+copy
+Or you can give them the control by prompting the browser to provide native controls for playing and pausing the audio as well as adjusting the volume.
+
+<audio src="desperado.mp3" controls>
+</audio>
+copy
+The audio element seems too good to be true. There's a catch. 
+The problem with the audio element isn't in the specification...the problem lies with audio formats. MP3 format is widely used everywhere, 
+but it is not an open format. What this means is that browsers can't decode MP3 files without paying a fee. 
+This fee is not a big deal for big companies such as Apple, but it is a big deal for smaller companies such as Mozilla. 
+This is why Safari will play back MP3 files while Firefox will not.
+
+The Vorbis codec, usually delivered as a  .ogg file, is an open format. Firefox supports Ogg Vorbis, but Safari doesn't. 
+Chrome supports both formats. Fortunately, there is a way to use the audio element to support all browsers that support the audio element.
+
+<audio controls>
+    <source src="desperado.ogg">
+    <source src="desperado.mp3">
+</audio>
+copy
+A browser that can play back Ogg Vorbis files will look no further than the first source element. 
+A browser that can play MP3 files will skip over the first source element and play the file in the second source element. 
+You can learn more about the audio tag here.
+
+Browser Support: Chrome 4.0+, IE 9.0+, FireFox 3.5+, Safari 4.0+, Opera 10.5+
+
+
+
+Video (https://www.w3schools.com/html/html5_video.asp)
+The Flash plugin is one of the most popular ways of displaying video content on the Web. HTML5 might change that. 
+The video element works just like the audio element. The main difference is that you probably want to provide dimensions for your video element.
+
+<video src="caddyshack.mp4" width="400" height="800" controls>
+</video>
+copy
+Once again there is a battle amongst the video formats. Some big players are MP4 (which is patent-encumbered) and Theora Video which isn't. 
+Safari does not support .ogv files while FireFox does not support .mp4 files. Chrome supports both. 
+Fortunately, you can use the video element to support all browsers that support the video element.
+
+<video width="400" height="200" poster="picture.jpg" controls>
+    <source src="caddyshack.ogv">
+    <source src="movie.mp4">
+</video>
+copy
+One of the limitations of relying on a plug-in for rich media is that plug-in content is sandboxed away from the rest of the web page. 
+Having native rich media elements in HTML means that we can have our media content play nicely with other browser technologies such as CSS and JavaScript. 
+You can learn more about the video element here.
+
+Browser Support: Chrome 4.0+, IE 9.0+, FireFox 3.5+, Safari 4.0+, Opera 10.5+
+
+
+
+Semantic Elements (https://www.w3schools.com/html/html5_semantic_elements.asp)
+HTML provides us elements that tell us exactly what it is we are working with such as paragraphs, lists, and headlines. 
+We also have elements that are more generic such as <div> and <span>. In addition to the basic headline, paragraph, 
+and list tags we can also use more descriptive tags such as <header>, <footer>, and <nav>. You can learn more about the semantic elements here.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+FAQ 
+Why didn't we cover new HTML5 tags like section, header, footer, main, etc?
+HTML5 has more new tags to help developers better structure the website contents. For a full list, read here: 
+http://www.w3schools.com/html/html5_new_elements.asp.  
+Although these tags can be useful, older browsers do not yet fully support some of the new HTML5 tags and for this reason, 
+we have decided to focus on the original/old HTML tags for now. 
+Once you master the original/traditional HTML tags, it's a lot easier to then start using the newer HTML5 tags. 
+Of course, know that older browsers may not be able to access the new HTML tags and your website may appear broken if accessed by an older browser.
+
+How do I know if my HTML is valid?
+You can (and should!) use http://validator.w3.org/ to verify your HTML.
+
+What is the difference between an id attribute and a name attribute?
+The id attribute identifies your element for the front-end (CSS and JavaScript.) It can be used on ANY element.
+
+The name attribute belongs ONLY on form elements and is used in the back-end (PHP, Ruby on Rails, etc.) to identify your form's values.
+
+What is the DOM?
+The Document Object Model (DOM) is a structured representation of your HTML as generated by the browser, 
+allowing access to the elements of your web page so they may be manipulated. Generally, it is JavaScript that does this manipulation. 
+The DOM is notoriously hard to define, so here's a metaphor:
+
+Let's say we have a piece of paper that says "Coding Dojo Rocks!". 
+We take out some magnetic letters, go to our fridge, and write out "Coding Dojo Rocks!", as per our paper. 
+That paper is your HTML, and the magnets can be considered our DOM.
+
+In a lot of cases, the magnets will remain the same as what is written on our paper, so there will be almost no difference between HTML and the DOM. 
+In other cases, we will want to change the words on the fridge, or alter the color of the magnets, or add other neat functionality. Changing those things is manipulating the DOM; the HTML paper we started with is unchanged, but the DOM is no longer identical
+
+When you see JavaScript that changes the DOM or hear people talking about DOM manipulation, 
+they are basically talking about interacting with those fridge magnets, after they had copied off of our HTML paper.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+NEW STUFF - RESPONSIVE WEB DESIGN (Add to this as you go)
+https://www.w3schools.com/TAGs/att_meta_name.asp
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+FORM ATTRIBUTES 
+https://www.w3schools.com/html/html_forms_attributes.asp
+
+Name Attribute 
+https://www.w3schools.com/html/html_forms.asp

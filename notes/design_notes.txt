@@ -1,0 +1,14 @@
+Design Styles for Inspriration:
+https://www.freecodecamp.org/news/15-web-developer-portfolios-to-inspire-you-137fb1743cae/
+https://www.forbes.com/sites/margiewarrell/2021/04/13/got-imposter-syndrome-how-to-stop-feeling-like-a-fraud-and-own-the-unique-value-you-bring/?sh=274d6b32a725
+https://learntocodewith.me/posts/portfolio-tips/
+
+
+
+add a feedback section under "About Me". See if you can get that stored into the database and review it. 
+
+also see if you can add an email function to a text box so people can get email me directly.
+
+implementing long-lived sessions ("stay connected" checkbox) with two separate sessions for each user: a short-lived session that contains the logged-in user ID, shopping cart, etc., and a long-lived session that only contains the user ID
+https://www.w3schools.com/js/js_cookies.asp
+https://stackoverflow.com/questions/32563236/relation-between-sessions-and-cookies
