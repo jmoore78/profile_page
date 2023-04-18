@@ -26,35 +26,102 @@
     <div class="jumbotron jumbotron-fluid bg-transparent"><!--text needs to be responsive when on a smaller screen-->
         <div class="text-white text-center">
             <h1 class="display-3 font-weight-bold text-monospace">Problem Solver | Developer | Programmer</h1>
+            <p>JS Python Node Flask SQL</p> <!--needs sized up for visual-->
         </div>
     </div>
 
-
-
-
-    <div class="container mt-5">
+<!-- Container Starts Here -->
+    <div class="container-fluid mt-3">
         <div class="row">
-            <div class="col text-white mb-5">
-                <h2 class="font-weight-bold text-center display-4"><a href="https://www.linkedin.com/in/joshm78" target="_blank">LinkedIn </a>Recommendations</h2><!--needs an alert for routing outside of the site-->
+            <div class="col">
+                <h2 class="text-white text-center">What Drives Me as a Developer?</h2>
             </div>
         </div>
-        <div class="row font-weight-bold">
+<!-- card row -->
+        <div class="row justify-content-center mb-3">
+            <div class="col-2">
+                <div class="card">
+                    <!-- <img src="#" alt=""> -->
+                    <div class="card-body">
+                        <p>Persistance</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <!-- <img src="#" alt=""> -->
+                    <div class="card-body">
+                        <p>Resilience</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <!-- <img src="#" alt=""> -->
+                    <div class="card-body">
+                        <p>Analytical</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- row for modal -->
+        <div class="row">
+            <div class="col">
+                <div class="d-flex  justify-content-center"><!-- Modal trigger button -->
+                    <button type="button" class="btn btn-primary justify-content-center" data-toggle="modal" data-target="#AboutMeModalLong">More About Me</button>
+                </div><!-- Modal -->
+                <div class="modal fade" id="AboutMeModalLong" tabindex="-1" role="dialog" aria-labelledby="AboutMeModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header justify-content-center">
+                                <h4 class="modal-title" id="AboutMeModalLongTitle">More About Me</h4>
+                                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button> -->
+                            </div>
+                            <div class="modal-body">
+                            <h5>Background</h5>
+                            <p>Stuff here</p>
+                            <h5>Interests</h5>
+                            <p>Stuff here</p>
+                            <h5>Why Software Development?</h5>
+                            <p>Stuff here</p>
+                            <h5>Client-Side or Server-Side?</h5>
+                            <p>Stuff here</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+<!-- LinkedIn Recommendations Section -->
+        <div class="row mt-5">
+            <div class="col text-white">
+                <h2 class="font-weight-bold display-4 text-center"><a href="https://www.linkedin.com/in/joshm78" target="_blank">LinkedIn </a>Recommendations</h2><!--needs an alert for routing outside of the site-->
+            </div>
+        </div>
+        <div class="row">
             <div class="col">
                 <div id="carouselRecommendationsControls" class="carousel" data-ride="carousel">
-                    <div class="carousel-inner text-white font-italic bg-secondary rounded">
+                    <div class="carousel-inner text-white font-italic rounded">
                         <div class="carousel-item active w-75 mx-auto my-2">
                             <div class="py-3">
-                                <h4>"Josh helps make those around him better software developers. He has a mindset of continual improvement that not only makes him a capable developer but is infectious and motivating to those around him. I saw this first hand in our cohort at Coding Dojo and I believe he will improve any development team he's a part of going forward."</h4>
+                                <h4 class="font-weight-bold">"Josh helps make those around him better software developers. He has a mindset of continual improvement that not only makes him a capable developer but is infectious and motivating to those around him. I saw this first hand in our cohort at Coding Dojo and I believe he will improve any development team he's a part of going forward."</h4>
                             </div>
                         </div>
                         <div class="carousel-item w-75 mx-auto my-2">
                             <div class="py-3">
-                                <h4>"Josh is just simply one of the best of us. In our cohort of students he was consistently ahead of the material and helping others get ahead as well. Not only was he a stellar programmer with attention to every detail and constantly asking the hard hitting questions, he was an excellent motivator for his classmates."</h4>
+                                <h4 class="font-weight-bold">"Josh is just simply one of the best of us. In our cohort of students he was consistently ahead of the material and helping others get ahead as well. Not only was he a stellar programmer with attention to every detail and constantly asking the hard hitting questions, he was an excellent motivator for his classmates."</h4>
                             </div>
                         </div>
                         <div class="carousel-item w-75 mx-auto my-2">
                             <div class="py-3">
-                                <h4>"Josh was an amazing colleague. We worked together in Regional Operations with LA Fitness, for 5 years. Josh mentored me in the areas of facilities and safety compliance. I was inspired by his ability to professionally communicate with employees at all levels and his problem-solving capabilities. We worked on many projects together and Josh displayed tremendous leadership..."</h4>
+                                <h4 class="font-weight-bold">"Josh was an amazing colleague. We worked together in Regional Operations with LA Fitness, for 5 years. Josh mentored me in the areas of facilities and safety compliance. I was inspired by his ability to professionally communicate with employees at all levels and his problem-solving capabilities. We worked on many projects together and Josh displayed tremendous leadership..."</h4>
                             </div>
                         </div>
                     </div>
