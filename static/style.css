@@ -1,0 +1,16 @@
+
+/* styling for index.html */
+#indexBody {
+    background: url(../images/the_thinker_color.jpg) no-repeat; 
+    background-size: cover;
+}
+
+.textShadow {
+    text-shadow: 0.125rem 0.125rem grey;
+}
+
+.jumboPara {
+    font-size: 3rem;
+}
+
+/* end of styling for index.html */
