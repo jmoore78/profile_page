@@ -9,8 +9,16 @@
     text-shadow: 0.125rem 0.125rem grey;
 }
 
-.jumboPara {
+.textShadowNone {
+    text-shadow: none;
+}
+
+.jumboParagraph {
     font-size: 3rem;
+}
+
+.cardBackground {
+    background-color: #201f1f88
 }
 
 /* end of styling for index.html */

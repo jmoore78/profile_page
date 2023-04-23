@@ -10,6 +10,7 @@
     <link rel="stylesheet" href='../static/style.css'>
     <title>Home | Professional Profile</title>
 </head>
+
 <body id="indexBody">
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary pl-5">
         <span class="navbar-brand font-italic font-weight-bold">MRJ Code Solutions</span>
@@ -18,108 +19,78 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavLinks">
             <div class="navbar-nav font-weight-bold">
-                <a class="nav-item nav-link btn btn-lg text-white pr-5" href="projects.html">Projects</a>
-                <a class="nav-item nav-link btn btn-lg text-white pr-5" href="future.html">Future</a>
+                <a class="nav-item nav-link btn btn-lg text-white mr-5 active" href="projects.html" role="button">Projects</a>
+                <a class="nav-item nav-link btn btn-lg text-white mr-5 active" href="future.html" role="button">Future</a>
             </div>
         </div>
     </nav>
+
+<!-- jumbotron section -->
     <div class="jumbotron jumbotron-fluid bg-transparent"><!--text needs to be responsive when on a smaller screen-->
         <div class="text-white text-center textShadow">
             <h1 class="display-3 font-weight-bold text-monospace">Problem Solver | Developer | Programmer</h1>
-            <p class="jumboPara">JS Python Node Flask SQL</p> <!--needs sized up for visual-->
+            <p class="jumboParagraph">JS - Python - Node - Flask - SQL</p>
         </div>
     </div>
 
 <!-- Container Starts Here -->
-    <div class="container-fluid mt-3">
-        <div class="row mb-2">
-            <div class="col">
-                <h2 class="text-white text-center textShadow">What Drives Me as a Developer?</h2>
+    <div class="container-fluid my-3">
+        <div class="row mb-4">
+            <div class="col d-flex justify-content-center">
+                <h2 class="text-white text-center textShadow">What Drives Me as a Developer?<a class="btn btn-sm bg-primary p-1 ml-3 textShadowNone" data-toggle="modal" data-target="#AboutMeModalLong" role="button">More About Me</a></h2>
+                <!-- Modal trigger button -->
             </div>
         </div>
+
 <!-- card row -->
-        <div class="row justify-content-center mb-3">
-            <div class="col-2">
-                <div class="card"><!-- card one -->
-                    <!-- <img src="#" alt=""> -->
-                    <div class="card-body">
-                        <p>Analytical</p>
-                        <p>Critical thinker, iterative, evaluative</p>
+        <div class="row justify-content-center">
+            <div class="col-3 mb-5">
+                <div class="card cardBackground"><!-- card one -->
+                    <div class="card-body text-white text-center border-0 rounded textShadow">
+                        <h4 class="font-weight-bold">Analytical</h4>
+                        <p class="font-weight-bold">Critical thinker by nature, constantly evaluating expectation vs reality.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-2">
-                <div class="card"><!-- card two -->
-                    <!-- <img src="#" alt=""> -->
-                    <div class="card-body">
-                        <p>Resilient</p>
-                        <p>Critical thinker, iterative, evaluative</p>
+            <div class="col-3 mb-5">
+                <div class="card cardBackground"><!-- card two -->
+                    <div class="card-body text-white text-center border-0 rounded textShadow">
+                        <h4 class="font-weight-bold">Resilient</h4>
+                        <p class="font-weight-bold">Comfortable utilizing diverse resources to build applicable knowledge.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-2">
-                <div class="card"><!-- card three -->
-                    <!-- <img src="#" alt=""> -->
-                    <div class="card-body">
-                        <p>Persistent</p>
-                        <p>Critical thinker, iterative, evaluative</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-<!-- row for modal -->
-        <div class="row">
-            <div class="col">
-                <div class="d-flex justify-content-center"><!-- Modal trigger button -->
-                    <button type="button" class="btn btn-primary justify-content-center w-50" data-toggle="modal" data-target="#AboutMeModalLong">More About Me</button>
-                </div><!-- Modal -->
-                <div class="modal fade" id="AboutMeModalLong" tabindex="-1" role="dialog" aria-labelledby="AboutMeModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header justify-content-center">
-                                <h4 class="modal-title" id="AboutMeModalLongTitle">More About Me</h4>
-                            </div>
-                            <div class="modal-body">
-                            <h5>Background</h5>
-                            <p>I had the dual advantage of growing up in a small town outside of a respectable university, which happened to have a nanotech department. The slowness of a small town afforded me the opportunity to daydream in reverence about the influence of technology on the ever-changing future. I always had a passion to continue learning and growing. I knew that somehow computed technology would be a part of that.</p>
-                            <p>My love for creative problem solving and a small town sense of compassion began to show through early on with shift-leader and customer service positions in high school. Management in general often required critical thinking for both customer/employee de-escalation but also strategic planning in day-to-day operations. I quickly identified compassion and persistence as a key tools for resolving issues to a positive-sum outcome for everyone involved.</p>
-                            <h5>Interests</h5>
-                            <p>Stuff here</p>
-                            <h5>Why Software Development?</h5>
-                            <p>Stuff here</p>
-                            <h5>Client-Side or Server-Side?</h5>
-                            <p>At the risk of sounding cliché: both, but for very different reasons. Client-side (or front-end) development allows me to tap on my Customer Service Management experience by using visual creativity and interactivity at the user-interface level. I really enjoy that user-driven, dynamic environment.</p>
-                            <p>On the server-side (or back-end), I respect the structural importance of intertwining a backend language with a database that not only supports front-end but creates the foundation for it in many cases. Server-side rewards the problem-solving side of me that I forged along the way in life but honed with Mission-Critical Facility Management. Bringing them together in Full-Stack using APIs feels like creative engineering!</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
+            <div class="col-3 mb-5">
+                <div class="card cardBackground"><!-- card three -->
+                    <div class="card-body text-white text-center border-0 rounded textShadow">
+                        <h4 class="font-weight-bold">Persistent</h4>
+                        <p class="font-weight-bold">Continually improving through iteration and utilizing it as a learning tool.</p>
                     </div>
                 </div>
             </div>
         </div>
+
 <!-- LinkedIn Recommendations Section -->
         <div class="row mt-5">
             <div class="col text-white">
-                <h2 class="font-weight-bold display-4 text-center"><a href="https://www.linkedin.com/in/joshm78" target="_blank">LinkedIn </a>Recommendations</h2><!--needs an alert for routing outside of the site-->
+                <h2 class="font-weight-bold text-center textShadow"><a class=" textShadowNone" href="https://www.linkedin.com/in/joshm78" target="_blank">LinkedIn </a>Recommendations</h2><!--needs an alert for routing outside of the site-->
             </div>
         </div>
-        <div class="row">
+        <div class="row mt-2">
             <div class="col">
                 <div id="carouselRecommendationsControls" class="carousel" data-ride="carousel">
                     <div class="carousel-inner text-white font-italic">
-                        <div class="carousel-item active w-75 mx-auto py2">
+                        <div class="carousel-item active w-75 mx-auto">
                             <div>
                                 <h4 class="font-weight-bold textShadow">"Josh helps make those around him better software developers. He has a mindset of continual improvement that not only makes him a capable developer but is infectious and motivating to those around him. I saw this first hand in our cohort at Coding Dojo and I believe he will improve any development team he's a part of going forward."</h4>
                             </div>
                         </div>
-                        <div class="carousel-item w-75 mx-auto py2">
+                        <div class="carousel-item w-75 mx-auto">
                             <div>
                                 <h4 class="font-weight-bold textShadow">"Josh is just simply one of the best of us. In our cohort of students he was consistently ahead of the material and helping others get ahead as well. Not only was he a stellar programmer with attention to every detail and constantly asking the hard hitting questions, he was an excellent motivator for his classmates."</h4>
                             </div>
                         </div>
-                        <div class="carousel-item w-75 mx-auto py2">
+                        <div class="carousel-item w-75 mx-auto">
                             <div>
                                 <h4 class="font-weight-bold textShadow">"Josh was an amazing colleague. We worked together in Regional Operations with LA Fitness, for 5 years. Josh mentored me in the areas of facilities and safety compliance. I was inspired by his ability to professionally communicate with employees at all levels and his problem-solving capabilities. We worked on many projects together and Josh displayed tremendous leadership..."</h4>
                             </div>
@@ -137,14 +108,30 @@
             </div>
         </div>
     </div>
-<!-- container to stop the verticle fluxuation -->
-    <footer class="text-center font-weight-bold text-white bg-transparent mt-5 fixed-bottom textShadow"><p>Josh M. Profile &copy</p>
-    </footer>
 
-
-
+<!-- modal -->
+    <div class="modal fade" id="AboutMeModalLong" tabindex="-1" role="dialog" aria-labelledby="AboutMeModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <h4 class="modal-title" id="AboutMeModalLongTitle">More About Me</h4>
+                </div>
+                <div class="modal-body">
+                <h5>Background</h5>
+                <p>I had the dual advantage of growing up in a small town outside of a respectable university, which happened to have a nanotech department. The slowness of a small town afforded me the opportunity to daydream about the influence of technology on the future. My childhood curiosity evolved into an excitement for the science of things and their interconnectedness.</p>
+                <p>Creative problem solving and a small town compassion began to professionally sharpen through shift-leader and customer service positions in high school. Management generally required critical thinking for both customer/employee de-escalation but also strategic planning in day-to-day operations and logistics. I quickly identified compassion and persistence as a key tools for positive-sum outcomes.</p>
+                <h5>Interests</h5>
+                <p>I appreciate the balance of the outdoors including hiking, camping and exploring the physical world. Any activity that includes some competion always grabs my attention. Documentaries, Historical and Philosophical studies, tinkering in general and of course Sci-Fi. As a childhood cancer survivor, I'm excited about the use of technology to push past limitations. It opens so many options, especially in areas of medical science, education and mental health. Robtics and automation have always facinated me and I believe they will be vital for further space exploration.</p>
+                <h5>Client-Side or Server-Side?</h5>
+                <p>At the risk of sounding cliché: both for different reasons. Client-side (or front-end) development allows me to tap on my Customer Service Management experience through visual creativity and interactivity at the user-interface level. I really enjoy that user-driven, dynamic environment.</p>
+                <p>Server-side (or back-end) rewards the problem-solving part of me that I honed with Mission-Critical Facility Management. I respect the structural importance of intertwining a backend language with a database that not only supports the front-end but creates the foundation for it so many ways. Bringing them together in Full-Stack with APIs is a feeling of satisfied completion that pulls on my Project Management experience.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
