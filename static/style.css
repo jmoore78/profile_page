@@ -5,6 +5,14 @@
     background-size: cover;
 }
 
+.indexCardBackground {
+    background-color: #201f1f88
+}
+
+.jumboParagraph {
+    font-size: 3rem;
+}
+
 .textShadow {
     text-shadow: 0.125rem 0.125rem grey;
 }
@@ -13,12 +21,10 @@
     text-shadow: none;
 }
 
-.jumboParagraph {
-    font-size: 3rem;
-}
-
-.cardBackground {
-    background-color: #201f1f88
-}
-
 /* end of styling for index.html */
+
+/* styling for projects.html */
+
+
+
+/* styling for projects.html */

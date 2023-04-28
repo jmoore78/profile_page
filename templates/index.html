@@ -10,17 +10,18 @@
     <link rel="stylesheet" href='../static/style.css'>
     <title>Home | Professional Profile</title>
 </head>
-
 <body id="indexBody">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary pl-5">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent pl-5">
         <span class="navbar-brand font-italic font-weight-bold">MRJ Code Solutions</span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavLinks" aria-controls="navbarNavLinks" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavLinks">
-            <div class="navbar-nav font-weight-bold">
-                <a class="nav-item nav-link btn btn-lg text-white mr-5 active" href="projects.html" role="button">Projects</a>
-                <a class="nav-item nav-link btn btn-lg text-white mr-5 active" href="future.html" role="button">Future</a>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link btn btn-lg text-dark font-weight-bold mr-5 active" href="index.html" role="button">Home</a>
+                <a class="nav-item nav-link btn btn-lg text-dark font-weight-bold mr-5" href="Portfolio.html" role="button">Portfolio</a>
+                <a class="nav-item nav-link btn btn-lg text-dark font-weight-bold mr-5" href="resume.html" role="button">Resume</a>
+                <a class="nav-item nav-link btn btn-lg text-dark font-weight-bold mr-5" href="contact.html" role="button">Contact</a>
             </div>
         </div>
     </nav>
@@ -29,23 +30,22 @@
     <div class="jumbotron jumbotron-fluid bg-transparent"><!--text needs to be responsive when on a smaller screen-->
         <div class="text-white text-center textShadow">
             <h1 class="display-3 font-weight-bold text-monospace">Problem Solver | Developer | Programmer</h1>
-            <p class="jumboParagraph">JS - Python - Node - Flask - SQL</p>
+            <p class="jumboParagraph">JavaScript - Python - Node - Flask - SQL</p>
         </div>
     </div>
 
 <!-- Container Starts Here -->
-    <div class="container-fluid my-3">
-        <div class="row mb-4">
+    <div class="container-fluid my-5">
+        <div class="row mb-5">
             <div class="col d-flex justify-content-center">
-                <h2 class="text-white text-center textShadow">What Drives Me as a Developer?<a class="btn btn-sm bg-primary p-1 ml-3 textShadowNone" data-toggle="modal" data-target="#AboutMeModalLong" role="button">More About Me</a></h2>
-                <!-- Modal trigger button -->
+                <h2 class="text-white text-center rounded-pill textShadow">What drives me as a Developer?<a class="btn btn-sm bg-primary p-1 ml-4 textShadowNone" data-toggle="modal" data-target="#AboutMeModalLong" role="button">More About Me</a></h2><!-- Modal trigger button -->
             </div>
         </div>
 
 <!-- card row -->
         <div class="row justify-content-center">
             <div class="col-3 mb-5">
-                <div class="card cardBackground"><!-- card one -->
+                <div class="card indexCardBackground"><!-- card one -->
                     <div class="card-body text-white text-center border-0 rounded textShadow">
                         <h4 class="font-weight-bold">Analytical</h4>
                         <p class="font-weight-bold">Critical thinker by nature, constantly evaluating expectation vs reality.</p>
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="col-3 mb-5">
-                <div class="card cardBackground"><!-- card two -->
+                <div class="card indexCardBackground"><!-- card two -->
                     <div class="card-body text-white text-center border-0 rounded textShadow">
                         <h4 class="font-weight-bold">Resilient</h4>
                         <p class="font-weight-bold">Comfortable utilizing diverse resources to build applicable knowledge.</p>
@@ -61,10 +61,10 @@
                 </div>
             </div>
             <div class="col-3 mb-5">
-                <div class="card cardBackground"><!-- card three -->
+                <div class="card indexCardBackground"><!-- card three -->
                     <div class="card-body text-white text-center border-0 rounded textShadow">
                         <h4 class="font-weight-bold">Persistent</h4>
-                        <p class="font-weight-bold">Continually improving through iteration and utilizing it as a learning tool.</p>
+                        <p class="font-weight-bold">Continually improving and building knowledge through iteration.</p>
                     </div>
                 </div>
             </div>
@@ -73,9 +73,10 @@
 <!-- LinkedIn Recommendations Section -->
         <div class="row mt-5">
             <div class="col text-white">
-                <h2 class="font-weight-bold text-center textShadow"><a class=" textShadowNone" href="https://www.linkedin.com/in/joshm78" target="_blank">LinkedIn </a>Recommendations</h2><!--needs an alert for routing outside of the site-->
+                <h2 class="font-weight-bold text-center textShadow"><a class="textShadowNone" href="https://www.linkedin.com/in/joshm78" target="_blank">LinkedIn </a>Recommendations</h2><!--needs an alert for routing outside of the site-->
             </div>
         </div>
+<!-- Carousel Section -->
         <div class="row mt-2">
             <div class="col">
                 <div id="carouselRecommendationsControls" class="carousel" data-ride="carousel">
@@ -127,11 +128,12 @@
                 <p>Server-side (or back-end) rewards the problem-solving part of me that I honed with Mission-Critical Facility Management. I respect the structural importance of intertwining a backend language with a database that not only supports the front-end but creates the foundation for it so many ways. Bringing them together in Full-Stack with APIs is a feeling of satisfied completion that pulls on my Project Management experience.</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
